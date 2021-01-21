@@ -20,7 +20,7 @@ program
 
 program.parse(process.argv);
 
-function proceedWithCommit(commitMessage) {
+function proceedWithCommit(message) {
   inquirer
     .prompt([
       {
@@ -31,6 +31,20 @@ function proceedWithCommit(commitMessage) {
       }
     ])
     .then((answers) => {
-      console.log(answers.type + ': ' + commitMessage);
+      const spawn = require('child_process').spawn;
+      const process = spawn('git', ['commit', '-m', createConventionalCommitMessage(answers.type, message)]);
+
+      process.stdout.setEncoding('utf8');
+      process.stdout.on('data', function (data) {
+        console.log(data);
+      });
+
+      process.stderr.on('data', function (data) {
+        console.error(data);
+      });
     });
+}
+
+function createConventionalCommitMessage(type, commitMessage) {
+  return type + ': ' + commitMessage;
 }
