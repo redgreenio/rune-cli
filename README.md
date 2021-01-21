@@ -2,7 +2,13 @@
 
 A dead-simple command line tool to make conventional commits.
 
-# License
+## Install
+
+```shell
+npm install -g rune-cli
+```
+
+## License
 
 ```
 Copyright 2021 Red Green, Inc.
