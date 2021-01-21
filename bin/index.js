@@ -7,10 +7,12 @@ const config = require('../lib/config.js');
 const packageJson = require('../package.json');
 
 const program = new Command();
-program.version(packageJson.version);
+program
+  .version('rune version ' + packageJson.version, '-v, --version');
+
 program
   .command('commit')
-  .description('Create a new commit containing the current contents of the index and the given log message describing the changes.')
+  .description('Create a new commit using given log message describing the changes.')
   .option('-m, --message <msg>', 'Use the given <msg> as the commit message.')
   .action((options) => {
     proceedWithCommit(options.message)
