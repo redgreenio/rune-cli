@@ -14,6 +14,13 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redgreenio/rune-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/redgreenio/rune-cli/issues"
+  },
   "bin": {
     "rune": "./bin/index.js"
   },
