@@ -13,7 +13,7 @@ program
 program
   .command('commit')
   .description('Create a new commit using given log message describing the changes.')
-  .option('-m, --message <msg>', 'Use the given <msg> as the commit message.')
+  .requiredOption('-m, --message <msg>', 'Use the given <msg> as the commit message.')
   .action((options) => {
     proceedWithCommit(options.message)
   })
