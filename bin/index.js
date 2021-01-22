@@ -21,6 +21,27 @@ program
 program.parse(process.argv);
 
 function proceedWithCommit(message) {
+  function removeExtraNewline(text) {
+    return text.slice(0, -1);
+  }
+
+  function setupStdoutOutput(process) {
+    process.stdout.setEncoding('utf8');
+    process.stdout.on('data', function (data) {
+      console.log(removeExtraNewline(data));
+    });
+  }
+
+  function setupStderrOutput(process) {
+    process.stderr.on('data', function (data) {
+      console.error(removeExtraNewline(data));
+    });
+  }
+
+  function createConventionalCommitMessage(type, commitMessage) {
+    return type + ': ' + commitMessage;
+  }
+
   inquirer
     .prompt([
       {
@@ -33,18 +54,7 @@ function proceedWithCommit(message) {
     .then((answers) => {
       const spawn = require('child_process').spawn;
       const process = spawn('git', ['commit', '-m', createConventionalCommitMessage(answers.type, message)]);
-
-      process.stdout.setEncoding('utf8');
-      process.stdout.on('data', function (data) {
-        console.log(data);
-      });
-
-      process.stderr.on('data', function (data) {
-        console.error(data);
-      });
+      setupStdoutOutput(process);
+      setupStderrOutput(process);
     });
-}
-
-function createConventionalCommitMessage(type, commitMessage) {
-  return type + ': ' + commitMessage;
 }
