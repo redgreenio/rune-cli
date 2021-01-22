@@ -15,8 +15,8 @@ program
   .description('Create a new commit using given log message describing the changes.')
   .requiredOption('-m, --message <msg>', 'Use the given <msg> as the commit message.')
   .action((options) => {
-    proceedWithCommit(options.message)
-  })
+    proceedWithCommit(options.message);
+  });
 
 program.parse(process.argv);
 
