@@ -8,6 +8,27 @@ A dead-simple command line tool to make conventional commits.
 npm install -g rune-cli
 ```
 
+## Usage
+
+`rune` is a drop-in replacement for `git commit -m <message>`. It lets you pick an appropriate conventional commit
+type before making the actual commit. Just replace `git commit -m <message>` with `rune commit -m <message>`.
+
+### Example
+```shell
+➜  your-project git:(main) rune commit -m "add installation instruction"
+? Select the type of change you are committing: (Use arrow keys)
+❯ feat:       A new feature 
+  fix:        A bug fix 
+  docs:       Documentation only changes 
+  test:       Adding missing tests 
+  refactor:   A code change that neither fixes a bug or adds a feature 
+  style:      Markup, white-space, formatting, missing semi-colons... 
+  perf:       A code change that improves performance 
+(Move up and down to reveal more choices)
+```
+
+As usual, you can always use `rune -h` to find out more!
+
 ## License
 
 ```
