@@ -1,6 +1,6 @@
 {
   "name": "rune-cli",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1-alpha",
   "description": "A dead-simple command line tool to make conventional commits.",
   "main": "bin/index.js",
   "scripts": {
