@@ -1,6 +1,6 @@
 # Rune
 
-A dead-simple command line tool to make conventional commits.
+A dead-simple command line tool to make [conventional commits](https://www.conventionalcommits.org).
 
 ## Install
 
