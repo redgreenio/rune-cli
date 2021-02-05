@@ -1,0 +1,62 @@
+[
+  {
+    "name": "feat:       A new feature",
+    "short": "feat: A new feature",
+    "value": "feat"
+  },
+  {
+    "name": "fix:        A bug fix",
+    "short": "fix: A bug fix",
+    "value": "fix"
+  },
+  {
+    "name": "docs:       Documentation only changes",
+    "short": "docs: Documentation only changes",
+    "value": "docs"
+  },
+  {
+    "name": "test:       Adding missing tests",
+    "short": "test: Adding missing tests",
+    "value": "test"
+  },
+  {
+    "name": "refactor:   A code change that neither fixes a bug nor adds a feature",
+    "short": "refactor: A code change that neither fixes a bug nor adds a feature",
+    "value": "refactor"
+  },
+  {
+    "name": "style:      Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)",
+    "short": "style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)",
+    "value": "style"
+  },
+  {
+    "name": "build:      Changes that affect the build system or external dependencies",
+    "short": "build: Changes that affect the build system or external dependencies",
+    "value": "build"
+  },
+  {
+    "name": "perf:       A code change that improves performance",
+    "short": "perf: A code change that improves performance",
+    "value": "perf"
+  },
+  {
+    "name": "chore:      Other changes that don't modify src or test files",
+    "short": "chore: Other changes that don't modify src or test files",
+    "value": "chore"
+  },
+  {
+    "name": "ci:         Changes to our CI configuration files and scripts",
+    "short": "ci: Changes to our CI configuration files and scripts",
+    "value": "ci"
+  },
+  {
+    "name": "release:    Create a release commit",
+    "short": "release: Create a release commit",
+    "value": "release"
+  },
+  {
+    "name": "revert:     Reverts a previous commit",
+    "short": "revert: Reverts a previous commit",
+    "value": "revert"
+  }
+]
