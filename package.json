@@ -4,7 +4,7 @@
   "description": "A dead-simple command line tool to make conventional commits.",
   "main": "bin/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/"
   },
   "author": "Ragunath Jawahar",
   "license": "Apache-2.0",
@@ -28,5 +28,8 @@
     "chalk": "^4.1.0",
     "commander": "^7.0.0",
     "inquirer": "^7.3.3"
+  },
+  "devDependencies": {
+    "approvals": "^3.0.5"
   }
 }
